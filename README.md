@@ -8,4 +8,8 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 | Speech Transcription on IPUs using Whisper | Whisper Tiny | ML Domain | Hugging Face | Inference | Yes | [BUTTON]
 | Speech Transcription on IPUs using Whisper | Whisper Tiny | ML Domain | Hugging Face | Fine-tuning | Yes | [BUTTON]
 
+## Whisper Resources
+Access GitHub Repo | Read the Blog | 
+
+
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
