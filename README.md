@@ -14,4 +14,4 @@ Access GitHub Repo | Read the Blog |
 
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
 
-To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us] (https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
+To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
