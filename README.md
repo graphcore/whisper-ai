@@ -4,7 +4,7 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 ## Whisper Notebooks powered by IPUs
 
 | Notebook  | Model Size | ML Domain | Framework | Type | Try for Free | 1-click Access
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Speech Transcription on IPUs using Whisper | Whisper Tiny | ML Domain | Hugging Face | Inference | Yes | [BUTTON]
 | Speech Transcription on IPUs using Whisper | Whisper Tiny | ML Domain | Hugging Face | Fine-tuning | Yes | [BUTTON]
 
