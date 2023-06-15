@@ -5,7 +5,7 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 
 | Notebook | Framework | Type | Try for Free 
 | ------------- | ------------- | ------------- | ------------- |
-| Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](../../../gradient-badge.svg)](https://ipu.dev/kC8VBy)
+| Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/3CGjC5E)
 
 
 ## Whisper Resources
