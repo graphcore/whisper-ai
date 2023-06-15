@@ -15,7 +15,6 @@ In this notebook, we demonstrate using Whisper for speech recognition and transc
 ## Whisper Resources
 Access Code | [Read the Blog](https://www.graphcore.ai/posts/how-to-use-openais-whisper-for-speech-recognition) | 
 
+To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
 
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
-
-To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
