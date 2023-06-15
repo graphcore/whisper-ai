@@ -9,6 +9,8 @@ Whisper is a versatile speech recognition model that can transcribe speech as we
 | ------------- | ------------- | ------------- | ------------- |
 | Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/kC8VBy)
 
+In this notebook, we demonstrate using Whisper for speech recognition and transcription on the IPU. We use the Optimum Graphcore package to interface between the IPU and the Hugging Face Transformers library. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
+
 
 ## Whisper Resources
 Access GitHub Repo | Read the Blog | 
