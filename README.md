@@ -1,5 +1,7 @@
 # Whisper on IPUs
-Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
+Whisper is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
+
+🤗 Optimum Graphcore is the interface between the 🤗 Transformers library and Graphcore IPUs. It provides a set of tools enabling model parallelization and loading on IPUs, training and fine-tuning on all the tasks already supported by Transformers while being compatible with the Hugging Face Hub and every model available on it out of the box.
 
 ## Whisper Notebooks powered by IPUs
 
