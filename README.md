@@ -1,13 +1,11 @@
-![gradient-badge 16 55 37](https://github.com/graphcore/whisper/assets/81682248/4f0488d9-bc41-445f-9da1-01dcbd792f15)# Whisper on IPUs
+# Whisper on IPUs
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model that can perform multilingual speech recognition, speech translation, and language identification.
 
 ## Whisper Notebooks powered by IPUs
 
-| Notebook  | Framework | Type | Try for Free 
+| Notebook | Framework | Type | Try for Free 
 | ------------- | ------------- | ------------- | ------------- |
-| Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | ![Uploading gradient-badge 16.55.37.svg…]()
-
-[BUTTON]
+| Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | <img width="100" alt="RoG" src="https://github.com/graphcore/whisper/assets/81682248/2317004e-1257-4145-8ff6-8a7fb61a0ac1" />](https://www.google.com/)
 
 ## Whisper Resources
 Access GitHub Repo | Read the Blog | 
