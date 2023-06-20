@@ -8,6 +8,8 @@ Whisper is a versatile speech recognition model that can transcribe speech as we
 
 Optimum Graphcore is the interface between the Hugging Face Transformers library and Graphcore IPUs. It provides a set of tools enabling model parallelization and loading on IPUs, training and fine-tuning on all the tasks already supported by Transformers while being compatible with the Hugging Face Hub and every model available on it out of the box.
 
+[WHY WHISPER ON IPUS?]
+
 ## Whisper Notebooks powered by IPUs
 
 | Notebook | Framework | Type | Try for Free 
