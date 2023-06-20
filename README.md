@@ -6,9 +6,9 @@
 # Whisper on IPUs
 Whisper is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
 
-Optimum Graphcore is the interface between the Hugging Face Transformers library and Graphcore IPUs. It provides a set of tools enabling model parallelization and loading on IPUs, training and fine-tuning on all the tasks already supported by Transformers while being compatible with the Hugging Face Hub and every model available on it out of the box.
+Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can build, fine-tune and deploy AI models such as Whisper using advanced, cost-efficient IPU compute on demand in the cloud.
 
-[WHY WHISPER ON IPUS?]
+Cost or performance advantages...
 
 ## Whisper Notebooks powered by IPUs
 
