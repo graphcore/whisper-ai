@@ -8,7 +8,6 @@ Whisper is a versatile speech recognition model that can transcribe speech as we
 
 Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can build, fine-tune and deploy AI models such as Whisper using advanced, cost-efficient IPU compute on demand in the cloud.
 
-Cost or performance advantages...
 
 ## Whisper Notebooks powered by IPUs
 
@@ -16,8 +15,9 @@ Cost or performance advantages...
 | ------------- | ------------- | ------------- | ------------- |
 | Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/RxNoMC)
 
-In this notebook, we demonstrate using Whisper for speech recognition and transcription on the IPU. We use the Optimum Graphcore package to interface between the IPU and the Hugging Face Transformers library. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
+In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs. 
 
+[See pricing options →](https://docs.paperspace.com/gradient/machines/?_gl=1*qwjwe6*_gcl_au*MTgxMTMxOTc1NS4xNjg1NDU0ODg2#ipu-machines)
 
 ## Whisper Resources
 
