@@ -10,6 +10,8 @@ Whisper is a versatile speech recognition model that can transcribe speech as we
 
 Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can build, fine-tune and deploy AI models such as Whisper using advanced, cost-efficient IPU compute on demand in the cloud.
 
+Performance...
+
 
 ## Whisper Notebooks powered by IPUs
 
