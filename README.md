@@ -31,6 +31,6 @@ To take your Whisper usage on IPUs further, or speak to an expert, please feel f
 
 ## IPU Community
 
-Join our growing community and interact with AI experts, IPU developers and Researchers. Hear the latest IPU news and get access to our newest models.
+Join our growing community and interact with AI experts, IPU developers and researchers. Hear the latest IPU news and get access to our newest models.
 
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
