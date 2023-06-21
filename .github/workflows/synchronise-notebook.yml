@@ -3,6 +3,9 @@ name: 'Copy notebooks from source repos'
 
 on:
   pull_request:
+  schedule:
+    # run at 9:00 AM GMT every day
+    - cron:  '0,9 9,16 * * *'
 
 jobs:
   setup-notebooks-list:
@@ -14,14 +17,6 @@ jobs:
       with:
         path: notebooks/
         ref: ${{ github.head_ref || github.ref }}
-    - name: Get changed notebooks if pull_request
-      if: github.event_name == 'pull_request'
-      id: changed-yaml
-      uses: tj-actions/changed-files@ce810b29b28abf274afebdcd8fe47b8fba0f28bd
-      with:
-        path: notebooks/
-        files: '**/notebook-source*.yaml'
-        files_ignore: 'paperspace-automation/'
     - name: install dependencies
       id: install-dependencies
       run: |
@@ -32,11 +27,9 @@ jobs:
         set -x
         pip install yq==3.2.1
         deployment_specs='[]'
-        changed_yaml='${{ steps.changed-yaml.outputs.all_changed_files }}'
-        echo "detected changes are: ${changed_yaml}"
         if [ -z "${{ inputs.deployment_spec }}" ]; then
             echo "Using changed files as trigger"
-            deployment_specs="${changed_yaml}"
+            deployment_specs=".github/notebook-source.yaml"
         else
             deployment_specs='${{ inputs.deployment_spec }}'
         fi
