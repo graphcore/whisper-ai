@@ -25,7 +25,7 @@ jobs:
     - name: install dependencies
       id: install-dependencies
       run: |
-        pip install -r .github/requirements.txt
+        pip install -r notebooks/.github/requirements.txt
     - name: Establish list of deployment_specs to check
       id: list-changed-yaml
       run: |
