@@ -2,16 +2,7 @@
 name: 'Copy notebooks from source repos'
 
 on:
-  workflow_call:
-    inputs:
-      deployment_spec:
-        required: false
-        type: string
-        description: "Spec file to be read for copying notebooks, must be valid input to deployment/deploy.py"
-        default: ""
-    secrets:
-      gh_token:
-        required: true
+  pull_request:
 
 jobs:
   setup-notebooks-list:
