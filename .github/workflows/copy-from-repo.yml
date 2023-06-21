@@ -1,0 +1,99 @@
+# Copyright (c) 2023 Graphcore Ltd. All rights reserved.
+name: 'Copy notebooks from source repos'
+
+on:
+  workflow_call:
+    inputs:
+      deployment_spec:
+        required: false
+        type: string
+        description: "Spec file to be read for copying notebooks, must be valid input to deployment/deploy.py"
+        default: ""
+    secrets:
+      gh_token:
+        required: true
+
+jobs:
+  setup-notebooks-list:
+    name:
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: Checkout notebooks
+      uses: actions/checkout@v3
+      with:
+        path: notebooks/
+        ref: ${{ github.head_ref || github.ref }}
+    - name: Get changed notebooks if pull_request
+      if: github.event_name == 'pull_request'
+      id: changed-yaml
+      uses: tj-actions/changed-files@ce810b29b28abf274afebdcd8fe47b8fba0f28bd
+      with:
+        path: notebooks/
+        files: '**/notebook-source*.yaml'
+        files_ignore: 'paperspace-automation/'
+    - name: install dependencies
+      id: install-dependencies
+      run: |
+        pip install -r .github/requirements.txt
+    - name: Establish list of deployment_specs to check
+      id: list-changed-yaml
+      run: |
+        set -x
+        pip install yq==3.2.1
+        deployment_specs='[]'
+        changed_yaml='${{ steps.changed-yaml.outputs.all_changed_files }}'
+        echo "detected changes are: ${changed_yaml}"
+        if [ -z "${{ inputs.deployment_spec }}" ]; then
+            echo "Using changed files as trigger"
+            deployment_specs="${changed_yaml}"
+        else
+            deployment_specs='${{ inputs.deployment_spec }}'
+        fi
+        echo $deployment_specs > active-deployment-specs.txt
+    - name: Run deployment script
+      id: run-changed-yaml
+      run: |
+        set -x
+        echo Running the following spec files: $deployment_spec
+        for spec in `cat active-deployment-specs.txt`
+        do
+          python notebooks/.github/copy.py --spec "notebooks/$spec" | tee "deployment_stdout_$(basename $foo).out"
+        done
+    - name: Prepare logs for upload
+      run: |
+        set +e
+        mkdir copy-logs/
+        cp deployment_*.json copy-logs/
+        cp active-deployment-specs.txt copy-logs/
+    - name: Upload Summary Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        path: copy-logs
+        name: deployment-logs
+    - name: Commit and push
+      id: commit-changes
+      run: |
+        set +e
+        active_specs=`cat active-deployment-specs.txt`
+        cd notebooks
+        GITHUB_EMAIL=$(git log -n 1 --skip 1 --pretty=format:%ae)
+        GITHUB_NAME=$(git log -n 1 --skip 1 --pretty=format:%an)
+        git config user.name $GITHUB_NAME
+        git config user.email $GITHUB_EMAIL
+        git status
+        git add -u
+        git commit -m "[GH-Actions] Add modified files from specs" -m "${active_specs}"
+        git add *
+        git commit -m "[GH-Actions] Add new files from specs" -m "${active_specs}"
+        git log -n 3
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@284f54f989303d2699d373481a0cfa13ad5a6666
+      with:
+        path: notebooks
+        title: Modified files for ${{ github.head_ref || github.ref }}
+        body: "Automatic PR capturing the changes to the deploy.yaml #${{ github.event.number }}"
+        base: ${{ github.head_ref || github.ref }}
+        labels: automated-pr
+        branch: gh-action-branches/${{ github.head_ref || github.ref }}
+        delete-branch: true
