@@ -24,7 +24,7 @@ In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for spee
 
 * [GitHub Code](https://github.com/graphcore/Gradient-HuggingFace/tree/main/early-access/whisper)
 * [Hugging Face Model](https://huggingface.co/Graphcore/whisper-tiny-ipu)
-* [Walkthrough Blog](https://www.graphcore.ai/posts/how-to-use-openais-whisper-for-speech-recognition)
+* [How-to Walkthrough Blog](https://www.graphcore.ai/posts/how-to-use-openais-whisper-for-speech-recognition)
 * [Original Paper](https://arxiv.org/abs/2212.04356)
 
 To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
