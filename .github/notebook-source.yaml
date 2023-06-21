@@ -18,7 +18,7 @@ whisper:
       prefix: notebooks/
   target:
     renames:
-      whisper-example.ipynb: whisper-ipu.ipynb
+      ./whisper-example.ipynb: ./whisper-ipu.ipynb
     repository:
       <<: *_common_target_repository
       prefix: ./
