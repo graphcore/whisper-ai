@@ -4,7 +4,6 @@ name: 'Copy notebooks from source repos'
 on:
   pull_request:
   schedule:
-    # run at 9:00 AM GMT every day
     - cron:  '56 * * * *'
 
 jobs:
