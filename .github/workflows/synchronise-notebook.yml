@@ -41,7 +41,7 @@ jobs:
         echo Running the following spec files: $deployment_spec
         for spec in `cat active-deployment-specs.txt`
         do
-          python notebooks/.github/copy.py --spec "notebooks/$spec" | tee "deployment_stdout_$(basename $foo).out"
+          python notebooks/.github/copy.py --spec "notebooks/$spec" | tee "deployment_stdout_$(basename $spec).out"
         done
     - name: Prepare logs for upload
       run: |
