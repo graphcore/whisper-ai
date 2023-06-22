@@ -79,5 +79,5 @@ jobs:
         body: "Automatic PR capturing the changes to the deploy.yaml #${{ github.event.number }}"
         base: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
         labels: automated-pr
-        branch: gh-action-branches/${{ github.head_ref || github.ref }}
+        branch: gh-action-branches/${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
         delete-branch: true
