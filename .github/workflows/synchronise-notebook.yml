@@ -2,10 +2,10 @@
 name: 'Copy notebooks from source repos'
 
 on:
-  pull_request:
+  # pull_request:
   schedule:
     # run at 9:00 AM GMT every day
-    - cron:  '0,9,45 9,16 * * *'
+    - cron:  '0,9,45 9,16,10 * * *'
 
 jobs:
   setup-notebooks-list:
