@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         path: notebooks/
-        ref: ${{ github.ref_name }}
+        ref: ${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
     - name: install dependencies
       id: install-dependencies
       run: |
@@ -59,12 +59,12 @@ jobs:
       uses: peter-evans/create-pull-request@284f54f989303d2699d373481a0cfa13ad5a6666
       with:
         path: notebooks
-        title: Synchronise files on '${{ github.ref_name }}' with source repositories
+        title: Synchronise files on '${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}' with source repositories
         body: |
           Automatic PR capturing the changes to the files defined in
           .github/notebook-source.yaml. This PR indicates that files have changed
           in the source repositories.
-        base: ${{ github.ref_name }}
+        base: ${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
         labels: automated-pr
-        branch: gh-action-branches/${{ github.ref_name }}
+        branch: gh-action-branches/${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
         delete-branch: true
