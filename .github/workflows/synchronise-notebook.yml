@@ -55,28 +55,15 @@ jobs:
       with:
         path: copy-logs
         name: deployment-logs
-    - name: Commit and push
-      id: commit-changes
-      run: |
-        set +e
-        active_specs=`cat active-deployment-specs.txt`
-        cd notebooks
-        GITHUB_EMAIL=$(git log -n 1 --skip 1 --pretty=format:%ae)
-        GITHUB_NAME=$(git log -n 1 --skip 1 --pretty=format:%an)
-        git config user.name $GITHUB_NAME
-        git config user.email $GITHUB_EMAIL
-        git status
-        git add -u
-        git commit -m "[GH-Actions] Add modified files from specs" -m "${active_specs}"
-        git add *
-        git commit -m "[GH-Actions] Add new files from specs" -m "${active_specs}"
-        git log -n 3
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@284f54f989303d2699d373481a0cfa13ad5a6666
       with:
         path: notebooks
-        title: Modified files for ${{ github.ref_name }}
-        body: "Automatic PR capturing the changes to the deploy.yaml #${{ github.event.number }}"
+        title: Synchronise files on '${{ github.ref_name }}' with source repositories
+        body: |
+          Automatic PR capturing the changes to the files defined in
+          .github/notebook-source.yaml. This PR indicates that files have changed
+          in the source repositories.
         base: ${{ github.ref_name }}
         labels: automated-pr
         branch: gh-action-branches/${{ github.ref_name }}
