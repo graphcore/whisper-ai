@@ -4,7 +4,7 @@
 </picture>
 
 # Whisper on IPUs
-<img width="500" alt="Waveform" src="https://github.com/graphcore/whisper/assets/81682248/ccc589de-55ee-4faf-b1da-08893f98a924">
+<img width="500" alt="Waveform" src="https://github.com/graphcore/whisper/assets/81682248/5f21338f-5358-4686-97cc-1f321405607f">
 
 Whisper is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
 
