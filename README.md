@@ -13,11 +13,13 @@ Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massi
 
 ## Whisper Notebooks powered by IPUs
 
-| Notebook | Framework | Type | Try for Free 
+| Notebook | Framework | Type | Try for Free
 | ------------- | ------------- | ------------- | ------------- |
 | Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/RxNoMC)
+| Multi-lingual ASR Transcription on IPUs using Whisper - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/1cP6n2)
 
-In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs. 
+
+In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
 
 
 ## Whisper Resources
@@ -34,3 +36,7 @@ To take your Whisper usage on IPUs further, or speak to an expert, please feel f
 Join our growing community and interact with AI experts, IPU developers and researchers. Hear the latest IPU news and get access to our newest models.
 
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
+
+## License
+
+The contents of this repository are made available according to the terms of the Apache 2.0 license. See the included [LICENSE](LICENSE) file for details.

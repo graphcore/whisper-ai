@@ -10,12 +10,10 @@ _common_target_repository: &_common_target_repository
 whisper:
   source:
     paths:
-    - expression: '*'
-      path: whisper/whisper-example.ipynb
-      recursive: true
+    - path: whisper/
     repository:
       <<: *_gradient_huggingface
-      prefix: notebooks/
+      prefix: whisper/
   target:
     renames:
       ./whisper-example.ipynb: ./whisper-ipu.ipynb
