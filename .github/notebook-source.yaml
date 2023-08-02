@@ -13,7 +13,7 @@ whisper:
     - path: whisper/
     repository:
       <<: *_gradient_huggingface
-      prefix: whisper/
+      prefix: notebooks/
   target:
     renames:
       ./whisper-example.ipynb: ./whisper-ipu.ipynb
