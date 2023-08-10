@@ -17,11 +17,13 @@ Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massi
 | ------------- | ------------- | ------------- | ------------- |
 | Speech Transcription on IPUs using Whisper Tiny | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/RxNoMC)
 | Multi-lingual ASR Transcription on IPUs using Whisper - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/1cP6n2)
-
+| Speech Transcription on IPUs using Whisper - Quantized Inference | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/Djq2SC)
 
 In the **Speech Transcription on IPUs using Whisper Tiny | Hugging Face** notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
 
-In the **Multi-lingual ASR Transcription on IPUs using Whisper - Fine-tuning** notebook, we demonstrate fine-tuning for multi-lingual speech transcription on the IPU using the Whisper implementation in the 🤗 Transformers library alongside Optimum Graphcore. 
+In the **Multi-lingual ASR Transcription on IPUs using Whisper - Fine-tuning** notebook, we demonstrate fine-tuning for multi-lingual speech transcription on the IPU using the Whisper implementation in the 🤗 Transformers library alongside Optimum Graphcore.
+
+In the **Speech Transcription on IPUs using Whisper - Quantized Inference** notebook, we demonstrate speech transcription on the IPU using the Whisper implementation in the 🤗 Transformers library alongside Optimum Graphcore using INT4 group quantization.
 
 
 ## Whisper Resources
